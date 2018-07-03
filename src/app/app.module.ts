@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { PasswordsPage } from '../pages/passwords/passwords';
+import { Clipboard } from '@ionic-native/clipboard';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { PasswordsPage } from '../pages/passwords/passwords';
   providers: [
     StatusBar,
     SplashScreen,
+    Clipboard,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
