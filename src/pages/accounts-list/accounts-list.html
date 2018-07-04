@@ -12,7 +12,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-list text-wrap>
+  <ion-list text-wrap *ngIf="accounts.length > 0">
     <ion-item-sliding *ngFor="let account of accounts">
         <button ion-item>
           <ion-avatar item-start no-padding>

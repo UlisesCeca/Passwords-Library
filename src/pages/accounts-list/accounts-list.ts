@@ -15,6 +15,7 @@ export class AccountsListPage {
   constructor(public navCtrl: NavController,
               public clipboard: Clipboard,
               private accountsP: AccountsProvider) {
+    this.accounts = [];
   }
 
   ionViewDidLoad() {
