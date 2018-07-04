@@ -19,7 +19,8 @@ import { AccountsProvider } from '../providers/accounts/accounts';
     BrowserModule,
     HttpClientModule,
     IonicModule.forRoot(MyApp, {
-      mode: "ios"
+      mode: "ios",
+      backButtonText: ''
     })
   ],
   bootstrap: [IonicApp],

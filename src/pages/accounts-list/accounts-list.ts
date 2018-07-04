@@ -26,5 +26,4 @@ export class AccountsListPage {
     this.accountsP.getAccounts().subscribe(accounts => this.accounts = accounts);
   }
 
-
 }
