@@ -3,10 +3,10 @@ import { NavController } from 'ionic-angular';
 import { Clipboard } from '@ionic-native/clipboard';
 
 @Component({
-  selector: 'passwords-list-home',
-  templateUrl: 'passwords-list.html'
+  selector: 'accounts-list-home',
+  templateUrl: 'accounts-list.html'
 })
-export class PasswordsListPage {
+export class AccountsListPage {
 
   constructor(public navCtrl: NavController,
               private clipboard: Clipboard) {
