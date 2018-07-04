@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Clipboard } from '@ionic-native/clipboard';
+import { Account } from '../../models/account';
+import { AccountsProvider } from '../../providers/accounts/accounts';
 
 @Component({
   selector: 'accounts-list-home',
@@ -8,13 +10,20 @@ import { Clipboard } from '@ionic-native/clipboard';
 })
 export class AccountsListPage {
 
+  accounts: Account[];
+
   constructor(public navCtrl: NavController,
-              private clipboard: Clipboard) {
-
+              public clipboard: Clipboard,
+              private accountsP: AccountsProvider) {
   }
 
-  prueba(): void {
-    this.clipboard.copy("password");
+  ionViewDidLoad() {
+    this.getAccounts();
   }
+
+  getAccounts(): void {
+    this.accountsP.getAccounts().subscribe(accounts => this.accounts = accounts);
+  }
+
 
 }

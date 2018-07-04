@@ -13,121 +13,17 @@
 
 <ion-content>
   <ion-list text-wrap>
-    <ion-item-sliding>
-      <button ion-item>
-        <ion-avatar item-start no-padding>
-            <img src="https://seeklogo.com/images/F/facebook-icon-logo-C61047A9E7-seeklogo.com.png"/>
-        </ion-avatar>
-        <h2>Nombre sitio</h2>
-        <p>Cuenta</p>
-      </button>
-      
-      <ion-item-options side="right">
-        <button ion-button color="danger" (click)="prueba()">
-          <ion-icon name="trash"></ion-icon>
-          Delete
-        </button>
-        <button ion-button color="secondary" (click)="prueba()">
-          <ion-icon name="refresh"></ion-icon>
-          New
-        </button>
-        <button ion-button color="primary" (click)="prueba()">
-          <ion-icon name="copy"></ion-icon>
-          Copy
-        </button>
-      </ion-item-options>
-    </ion-item-sliding>
-    
-    
-    <ion-item-sliding>
+    <ion-item-sliding *ngFor="let account of accounts">
         <button ion-item>
           <ion-avatar item-start no-padding>
-              <img src="https://cdn4.iconfinder.com/data/icons/free-colorful-icons/360/gmail.png"/>
+            <img [src]="account.icon"/>
           </ion-avatar>
-          <h2>Nombre sitio</h2>
-          <p>Cuenta</p>
+          <h2>{{account.site}}</h2>
+          <p>{{account.account}}</p>
         </button>
         
         <ion-item-options side="right">
-            <button ion-button color="danger" (click)="prueba()">
-              <ion-icon name="trash"></ion-icon>
-              Delete
-            </button>
-            <button ion-button color="secondary" (click)="prueba()">
-              <ion-icon name="refresh"></ion-icon>
-              New
-            </button>
-            <button ion-button color="primary" (click)="prueba()">
-              <ion-icon name="copy"></ion-icon>
-              Copy
-            </button>
-          </ion-item-options>
-      </ion-item-sliding>
-
-      
-    <ion-item-sliding>
-        <button ion-item>
-          <ion-avatar item-start no-padding>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/YouTube_icon.png"/>
-          </ion-avatar>
-          <h2>Nombre sitio</h2>
-          <p>Cuenta</p>
-        </button>
-        
-        <ion-item-options side="right">
-            <button ion-button color="danger" (click)="prueba()">
-              <ion-icon name="trash"></ion-icon>
-              Delete
-            </button>
-            <button ion-button color="secondary" (click)="prueba()">
-              <ion-icon name="refresh"></ion-icon>
-              New
-            </button>
-            <button ion-button color="primary" (click)="prueba()">
-              <ion-icon name="copy"></ion-icon>
-              Copy
-            </button>
-          </ion-item-options>
-      </ion-item-sliding>
-
-      
-    <ion-item-sliding>
-        <button ion-item>
-          <ion-avatar item-start no-padding>
-              <img src="https://cdn2.iconfinder.com/data/icons/minimalism/512/twitter.png"/>
-          </ion-avatar>
-          <h2>Nombre sitio</h2>
-          <p>Cuenta</p>
-        </button>
-        
-        <ion-item-options side="right">
-            <button ion-button color="danger" (click)="prueba()">
-              <ion-icon name="trash"></ion-icon>
-              Delete
-            </button>
-            <button ion-button color="secondary" (click)="prueba()">
-              <ion-icon name="refresh"></ion-icon>
-              New
-            </button>
-            <button ion-button color="primary" (click)="prueba()">
-              <ion-icon name="copy"></ion-icon>
-              Copy
-            </button>
-          </ion-item-options>
-      </ion-item-sliding>
-
-      
-    <ion-item-sliding>
-        <button ion-item>
-          <ion-avatar item-start no-padding>
-            <img src="https://cdn.icon-icons.com/icons2/642/PNG/512/linkedin_icon-icons.com_59208.png"/>
-          </ion-avatar>
-          <h2>Nombre sitio</h2>
-          <p>Cuenta</p>
-        </button>
-        
-        <ion-item-options side="right">
-            <button ion-button color="danger" (click)="prueba()">
+            <button ion-button color="danger">
               <ion-icon name="trash"></ion-icon>
               Delete
             </button>
@@ -135,7 +31,7 @@
               <ion-icon name="refresh"></ion-icon>
               New
             </button>
-            <button ion-button color="primary">
+            <button ion-button color="primary" (click)="clipboard.copy(account.password)">
               <ion-icon name="copy"></ion-icon>
               Copy
             </button>
