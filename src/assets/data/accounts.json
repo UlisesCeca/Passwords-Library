@@ -1,0 +1,37 @@
+[
+    {
+            "account": "ulises@ulisesceca.com",
+            "password": "ohfwoeifhwoefihf",
+            "site": "Facebook",
+            "description": "",
+            "icon": "https://seeklogo.com/images/F/facebook-icon-logo-C61047A9E7-seeklogo.com.png"
+        },
+        {
+            "account": "wrongbunkay80@gmail.com",
+            "password": "ohfwoeifhwoefihf",
+            "site": "Gmail",
+            "description": "",
+            "icon": "https://cdn4.iconfinder.com/data/icons/free-colorful-icons/360/gmail.png"
+        },
+        {
+            "account": "wrongbunkay80@gmail.com",
+            "password": "ohfwoeifhwoefihf",
+            "site": "Youtube",
+            "description": "",
+            "icon": "https://upload.wikimedia.org/wikipedia/commons/4/4c/YouTube_icon.png"
+        },
+        {
+            "account": "ulises@ulisesceca.com",
+            "password": "ohfwoeifhwoefihf",
+            "site": "Twitter",
+            "description": "",
+            "icon": "https://cdn2.iconfinder.com/data/icons/minimalism/512/twitter.png"
+        },
+        {
+            "account": "ulises@ulisesceca.com",
+            "password": "ohfwoeifhwoefihf",
+            "site": "Linkedin",
+            "description": "",
+            "icon": "https://cdn.icon-icons.com/icons2/642/PNG/512/linkedin_icon-icons.com_59208.png"
+        }
+]
