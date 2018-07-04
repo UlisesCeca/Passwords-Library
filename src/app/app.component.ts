@@ -3,13 +3,13 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { PasswordsPage } from '../pages/passwords/passwords';
+import { PasswordsListPage } from '../pages/passwords-list/passwords-list';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = PasswordsPage;
+  rootPage:any = PasswordsListPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

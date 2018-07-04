@@ -5,13 +5,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { PasswordsPage } from '../pages/passwords/passwords';
+import { PasswordsListPage } from '../pages/passwords-list/passwords-list';
 import { Clipboard } from '@ionic-native/clipboard';
 
 @NgModule({
   declarations: [
     MyApp,
-    PasswordsPage
+    PasswordsListPage
   ],
   imports: [
     BrowserModule,
@@ -22,7 +22,7 @@ import { Clipboard } from '@ionic-native/clipboard';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    PasswordsPage
+    PasswordsListPage
   ],
   providers: [
     StatusBar,
