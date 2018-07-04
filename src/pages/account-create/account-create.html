@@ -7,6 +7,21 @@
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content>
+  <form *ngIf="form" [formGroup]="form" (ngSubmit)="createItem()">
+    <ion-list>
+      <ion-item>
+        <ion-label color="danger" floating>Site</ion-label>
+        <ion-input type="text" formControlName="name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="danger" floating>Account</ion-label>
+        <ion-input type="text" formControlName="about"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="danger" floating>Icon</ion-label>
+        <ion-input type="text" formControlName="about"></ion-input>
+      </ion-item>
+    </ion-list>
+  </form>
 </ion-content>
