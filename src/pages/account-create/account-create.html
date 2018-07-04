@@ -3,11 +3,6 @@
     <ion-title>
       New Account
     </ion-title>
-    <ion-buttons end padding-right>
-      <button ion-button icon-only>
-        <ion-icon name="checkmark"></ion-icon>
-      </button>
-    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -15,18 +10,40 @@
 <ion-content>
   <form *ngIf="form" [formGroup]="form" (ngSubmit)="createItem()">
     <ion-list>
+      <ion-list-header>
+        General
+      </ion-list-header>
       <ion-item>
-        <ion-label color="danger" floating>Site</ion-label>
-        <ion-input type="text" formControlName="name"></ion-input>
+        <ion-label color="danger" stacked>Site</ion-label>
+        <ion-input type="text" placeholder="Site" formControlName="name"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label color="danger" floating>Account</ion-label>
-        <ion-input type="text" formControlName="about"></ion-input>
+        <ion-label color="danger" stacked>Account</ion-label>
+        <ion-input type="text" placeholder="Account" formControlName="about"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label color="danger" floating>Icon</ion-label>
-        <ion-input type="text" formControlName="about"></ion-input>
+        <ion-label color="danger" stacked>Icon URL</ion-label>
+        <ion-input type="text" placeholder="Icon URL" formControlName="about"></ion-input>
+      </ion-item>
+      <br><br>
+      <ion-list-header>
+        Password Strenght
+      </ion-list-header>
+      <ion-item>
+        <ion-label color="danger">Letters</ion-label><br>
+        <ion-checkbox color="danger" checked="true"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label color="danger">Numbers</ion-label><br>
+        <ion-checkbox color="danger" checked="true"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label color="danger">Symbols</ion-label><br>
+        <ion-checkbox color="danger" checked="true"></ion-checkbox>
       </ion-item>
     </ion-list>
   </form>
+  <ion-fab padding bottom right>
+    <button ion-fab color="danger"><ion-icon name="checkmark"></ion-icon></button>
+  </ion-fab>
 </ion-content>
